@@ -85,7 +85,9 @@
             <div class="container">
                 <p>"{{comment.comment}}"</p>
                 <p>Poster: {{comment.poster.first_name}} {{comment.poster.last_name}}</p>
+                {% if user.id == comment.poster.id %} 
                 <a class="badge badge-pill badge-secondary" href="/delete/{{comment.id}}">Delete</a>
+                {% endif %}
                 <hr class="my-4">
                 <p class="lead">
                     <a class="btn btn-outline-secondary btn-lg" href="/about_us" role="button">Read More</a>
